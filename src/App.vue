@@ -1,30 +1,61 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  
+  <router-view></router-view>
+  <Project :projects="projects" />
+  <FooterView/>
   </nav>
-  <router-view/>
+  
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Project from './components/Project.vue'
+import FooterView from './components/FooterView.vue';
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+export default {
+  name: 'App',
+  components:{
+    Project,
+    FooterView,
+  },
+  data() {
+    return {
+      projects: [
+        { id: 1,
+           name: "Crée le CV avec HTMLet CSS  ",
+           date: "01/12/2023",
+           imageUrl: require('./assets/18.png'),
+           hover: false,
+           
+        },
+        { id: 2,
+           name: "Crée une space commentaire ",
+           date:"07/02/2024",
+           imageUrl: require('./assets/19.jpg'),
+           hover: false,
 
-nav a.router-link-exact-active {
-  color: #42b983;
+        },
+        { id: 3,
+          name: "Crée le chaier de charge",
+          date:"01/04/2024",
+          imageUrl: require('./assets/20.jpg'),
+          hover: false,
+
+        },
+      ]
+    }
+  }
+  
+
+  
+
+  }
+
+</script>
+
+<style scoped>
+name{
+  color: blue;
 }
 </style>
