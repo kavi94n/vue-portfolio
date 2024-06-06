@@ -2,22 +2,24 @@
   <nav>
   
   <router-view></router-view>
-  <Project :projects="projects" />
+  <projects :projects="projects" />
   <FooterView/>
   </nav>
   
 </template>
 
 <script>
-import Project from './components/Project.vue'
-import FooterView from './components/FooterView.vue';
+
+import FooterView from './components/FooterView.vue'
+import projects from './components/Project.vue'
 
 
 export default {
   name: 'App',
   components:{
-    Project,
+    projects,
     FooterView,
+    
   },
   data() {
     return {

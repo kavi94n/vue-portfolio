@@ -36,7 +36,7 @@
 
 <script>
 
-import Project from '@/components/Project.vue'
+import Project from '@/components/Project.vue';
 import NavBar from '../components/NavBar.vue'
 import AboutView from './AboutView.vue'
 
@@ -46,7 +46,8 @@ export default {
   components:{
     NavBar,
     AboutView,
-    Project,
+   Project
+
   }
 }
 </script>

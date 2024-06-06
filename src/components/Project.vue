@@ -1,4 +1,5 @@
 <template>
+   
   <h1>Mes Projets</h1>
   <div  id="project" class="project">
    
@@ -7,7 +8,7 @@
       <div >
           <h2 class="name">{{ project.name }}</h2>
           <p class="date">{{ project.date }}</p>
-          <div class="image-container">
+      <div class="image-container">
         <img :src="project.imageUrl" :alt="project.name" class="project-image" />
         <button v-if="project.hover" class="open-button">Open</button>
       </div>
